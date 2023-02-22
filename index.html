@@ -1,11 +1,26 @@
 <html>
   <head>
     <title>El Meshwar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <meta name="description" content="El Meshwar is a transmedia experience capturing the journey of commuting via Cairo's Metro.">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script type="module" src="./index.js"></script>
+    
+    <div class="header">
+      <nav>
+        <h1 id="info" href="">INFO</h1>
+        <a id="logo" href="index.html">
+          <img src="img/logo.png" height="100">
+        </a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars">
+      </nav>
+    </div>
+
   </head>
+  
   <body>
     <div id="map"></div>
 
@@ -15,8 +30,23 @@
   var myOptions = {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     zoom: 12,
-    center: { lat: 30.0444, lng: 31.2357 } // Cairo's coordinates
+    center: { lat: 30.0444, lng: 31.2357 }, // Cairo's coordinates
+    styles: [
+     {
+    featureType: 'administrative',
+    elementType: 'labels',
+    stylers: [
+      {visibility: 'off'},
+      // Add any stylers you need.
+    ]
+  },
+  {
+    featureType: '',
+    // Add the stylers you need.
+  }
+]
   };
+  
   
   // Create map
   var map = new google.maps.Map(document.getElementById('map'), myOptions);
