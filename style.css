@@ -19,3 +19,32 @@ body {
 [class$=api-load-alpha-banner] {
   display: none;
 }
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(Winkle-Bold.ttf);
+}
+
+#info{
+  font-family: myFirstFont;
+  color: #065390;
+  font-size: 40px;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2%;
+  padding-left: 4%;
+  padding-right: 15%;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 60vh;
+}
