@@ -22,20 +22,6 @@ body {
   box-sizing: border-box;
 }
 
-#slide{
-  height: 100%;
-  width: 180px;
-  position: absolute;
-  background-color: white;
-  transition: 0.5s ease;
-}
-
-#infoDesc{
-  padding: 5px, 0;
-  display: block;
-  transition: 0.2s ease;
-}
-
 [class$=api-load-alpha-banner] {
   display: none;
 }
@@ -58,11 +44,6 @@ nav{
   padding-top: 2%;
   padding-left: 4%;
   padding-right: 15%;
-}
-
-body{
-  margin: 0;
-  padding: 0;
 }
 
 #map {
