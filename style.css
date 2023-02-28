@@ -1,21 +1,16 @@
-/* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
+/* sets the map height explicitly to define the size of the div element that contains it. */
  #map {
   height: 100%;
 }
 
-/* 
- * Optional: Makes the sample page fill the window. 
- */
-html,
-body {
+/* makes the page fill the window */
+html {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+/* makes the map fill the window */
 *{
   margin: 0;
   padding: 0;
@@ -26,26 +21,42 @@ body {
   display: none;
 }
 
+/* use font from project folder */
 @font-face {
-  font-family: myFirstFont;
+  font-family: Winkle-Bold;
   src: url(Winkle-Bold.ttf);
 }
 
-#info{
-  font-family: myFirstFont;
+Nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-left: 3%;
+  padding-right: 10%;
+  /* backdrop-filter: blur(4px); */
+  /* -webkit-backdrop-filter: blur(4px); */
+  /* border: 1px solid rgba(0, 0, 0, 0.5); */
+  position: fixed;
+  z-index: 2;  background-color: transparent;
+  width: 100%;
+}
+
+/* #info{
+  font-family: Winkle-Bold;
   color: #065390;
   font-size: 40px;
 }
 
-nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 2%;
-  padding-left: 4%;
-  padding-right: 15%;
+#infoButton{
+  border-color: white;
+  text-decoration: none;
+  transition-duration: 0.4s;
 }
 
-#map {
-  height: 60vh;
-}
+#infoButton:hover {
+  background-color: transparent; 
+  color: #c22e3a;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+} */

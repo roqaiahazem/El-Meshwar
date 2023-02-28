@@ -31,7 +31,8 @@ var markersRef = ref(database, "markers");
 
 // initialize and add the map
 function initMap() {
-  // Map options
+
+  // map options
   var myOptions = {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     zoom: 10.5,
@@ -42,20 +43,21 @@ function initMap() {
         elementType: "labels",
         stylers: [
           { visibility: "off" },
-          // Add any stylers you need.
+          // add any stylers needed
         ],
       },
       {
         featureType: "",
-        // Add the stylers you need.
+        // add the stylers needed
       },
+      
     ],
   };
 
-  // Create map
+  // create map
   var map = new google.maps.Map(document.getElementById("map"), myOptions);
 
-  // Metro lines and station coordinates
+  // metro lines and station coordinates
   var lines = [
     {
       name: "Line 1",
@@ -413,11 +415,11 @@ function initMap() {
 
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i];
-    // Get coordinates for each station
+    // get coordinates for each station
     var lineCoords = line.stations.map(function (station) {
       return station.coords;
     });
-    // Draw line on map
+    // draw line on map
     var metroLine = new google.maps.Polyline({
       path: lineCoords,
       geodesic: true,
@@ -490,7 +492,7 @@ function initMap() {
         marker.setDraggable(false);
         marker.setTitle(label);
 
-        // Save marker to Firebase database
+        // save marker to Firebase database
         const markersListRef = ref(database, "markers");
         const newMarkerRef = push(markersListRef);
         set(newMarkerRef, {
@@ -514,9 +516,9 @@ function initMap() {
         title: childData.label,
         draggable: false,
       });
-
+      
       // create and open an info window with the label as its content when the marker is clicked
-      marker.addListener("click", function () {
+       marker.addListener("click", function () {
         var infoWindow = new google.maps.InfoWindow({
           content: childData.label,
         });
@@ -524,6 +526,7 @@ function initMap() {
       });
     });
   });
+  
 }
 
 window.initMap = initMap;

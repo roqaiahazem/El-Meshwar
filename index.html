@@ -10,11 +10,13 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="module" src="index.js"></script>
-    <div class="header">
+  </head>
+
+  <body>
       <nav>
-        <a>
+        <button id="infoButton">
           <h1 id="info" href="">INFO</h1>
-        </a>
+        </button>
         <a id="logo" href="index.html">
           <img src="img/logo.png" height="100" />
         </a>
@@ -22,13 +24,11 @@
           <i class="fa fa-bars"></i
         ></a>
       </nav>
+      
+    <div class="infoDesc">
     </div>
-  </head>
-
-  <body>
 
     <div id="map"></div>
-
     <script
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVJPu7IRt4xdVCcY2cf4g2NaYmxzpUoLg&callback=initMap"
