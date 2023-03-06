@@ -37,20 +37,53 @@ function initMap() {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     zoom: 10.5,
     center: { lat: 30.0444, lng: 31.2357 }, // Cairo's coordinates
+    disableDefaultUI: true,
     styles: [
+      // add any stylers needed
       {
         featureType: "administrative",
         elementType: "labels",
         stylers: [
           { visibility: "off" },
-          // add any stylers needed
         ],
       },
+      // add more stylers 
       {
-        featureType: "",
-        // add the stylers needed
+        featureType: "landscape.man_made",
+        stylers: [
+          {visibility: "off"},
+        ]
       },
-      
+      {
+        featureType: "landscape.man_made",
+        stylers: [
+          {color: "#CFCFCF"},
+        ]
+      },
+      {
+        featureType: "poi",
+        stylers: [
+          {visibility: "off"},
+        ]
+      },
+      {
+        featureType: "transit",
+        stylers: [
+          {visibility: "off"},
+        ]
+      },
+      {
+        featureType: "road.arterial",
+        stylers: [
+          {visibility: "off"},
+        ]
+      },
+      // {
+      //   featureType: "road.highway",
+      //   stylers: [
+      //     {visibility: "off"},
+      //   ]
+      // },
     ],
   };
 
@@ -475,7 +508,7 @@ function initMap() {
     });
     var infowindow = new google.maps.InfoWindow({
       content:
-        '<input type="text" placeholder="Label" id="label" /><br /><button onclick="saveMarker()">Save</button>',
+        '<input type="text" placeholder="Tell us about a little anecdote!" id="label" /><br /><button onclick="saveMarker()">Save</button>',
     });
     infowindow.open(map, marker);
     google.maps.event.addListener(marker, "dragend", function () {

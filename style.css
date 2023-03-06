@@ -33,25 +33,26 @@ Nav{
   justify-content: space-between;
   padding-top: 18px;
   padding-left: 3%;
-  padding-right: 10%;
+  padding-right: 17%;
   /* backdrop-filter: blur(4px); */
   /* -webkit-backdrop-filter: blur(4px); */
   /* border: 1px solid rgba(0, 0, 0, 0.5); */
   position: fixed;
-  z-index: 2;  background-color: transparent;
+  z-index: 2;  
+  background-color: transparent;
   width: 100%;
 }
 
-/* #info{
+/* #infoButton{
   font-family: Winkle-Bold;
   color: #065390;
-  font-size: 40px;
-}
-
-#infoButton{
-  border-color: white;
-  text-decoration: none;
-  transition-duration: 0.4s;
+  font-size: 40px; */
+    /* border-color: white; */
+    /* text-decoration: none;
+    transition-duration: 0.4s;
+    z-index: 2;  
+    background-color: transparent;
+    width: 5%;
 }
 
 #infoButton:hover {
@@ -60,3 +61,72 @@ Nav{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   cursor: pointer;
 } */
+
+#label {
+  text-align: center;
+  width: 200px;
+  height: 60px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar p {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #045195;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar p:hover {
+  color: #f1f1f1;
+}
+
+.openbtn {
+  font-family: Winkle-Bold;
+  font-size: 40px;
+  cursor: pointer;
+  color: #045195;
+  padding: 10px 15px;
+  border: none;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  font-family: Winkle-Bold;
+  text-decoration: none;
+  top: 0;
+  right: 25px;
+  font-size: 30;
+  margin-left: 50px;
+  padding-top: 25px;
+  color: #c22e3a;
+}
+
+.openbtn:hover {
+  /* text-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
+  cursor: pointer;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
