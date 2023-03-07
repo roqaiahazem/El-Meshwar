@@ -7,7 +7,17 @@ import {
   onValue, push
 } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
 
-// TODO: Add SDKs for Firebase products that you want to use
+//constraining map to Egypt bounds
+let map;
+const Cairo_BOUNDS = {
+  north: 30.698613784827117,
+  south: 29.67076334280161,
+  west: 30.17080053626919,
+  east: 30.174607938427343,
+};
+const SADAT = { lat: 30.069007903411094, lng: 31.32448783406444 };
+
+// add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // web app's Firebase configuration
 const firebaseConfig = {
@@ -31,6 +41,16 @@ var markersRef = ref(database, "markers");
 
 // initialize and add the map
 function initMap() {
+
+  //call the cairo map bounds
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: SADAT,
+    restriction: {
+      latLngBounds: Cairo_BOUNDS,
+      strictBounds: false,
+    },
+    zoom: 7,
+  });
 
   // map options
   var myOptions = {
