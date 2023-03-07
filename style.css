@@ -27,7 +27,7 @@ html {
   src: url(Winkle-Bold.ttf);
 }
 
-Nav{
+nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,7 +38,7 @@ Nav{
   /* -webkit-backdrop-filter: blur(4px); */
   /* border: 1px solid rgba(0, 0, 0, 0.5); */
   position: fixed;
-  z-index: 2;  
+  z-index: 1;  
   background-color: transparent;
   width: 100%;
 }
@@ -68,11 +68,26 @@ Nav{
   height: 60px;
 }
 
+#savebtn{
+  background-color: #045195;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+#savebtn:hover{
+  background-color: white;
+  color: #c22e3a;
+}
+
 .sidebar {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   background-color: white;
@@ -82,17 +97,17 @@ Nav{
 }
 
 .sidebar p {
-  padding: 8px 8px 8px 32px;
+  padding: 20px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 16px;
   color: #045195;
   display: block;
   transition: 0.3s;
 }
-
+/* 
 .sidebar p:hover {
   color: #f1f1f1;
-}
+} */
 
 .openbtn {
   font-family: Winkle-Bold;
@@ -104,6 +119,8 @@ Nav{
 }
 
 .sidebar .closebtn {
+  background: none;
+  border: none;
   position: absolute;
   font-family: Winkle-Bold;
   text-decoration: none;
@@ -113,6 +130,7 @@ Nav{
   margin-left: 50px;
   padding-top: 25px;
   color: #c22e3a;
+  cursor: pointer;
 }
 
 .openbtn:hover {

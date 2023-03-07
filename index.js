@@ -508,13 +508,13 @@ function initMap() {
     });
     var infowindow = new google.maps.InfoWindow({
       content:
-        '<input type="text" placeholder="Tell us about a little anecdote!" id="label" /><br /><button onclick="saveMarker()">Save</button>',
+        '<input type="text" placeholder="Tell us about a little anecdote!" id="label" /> <br><br> <button id="savebtn" onclick="saveMarker()">Save</button>',
     });
     infowindow.open(map, marker);
     google.maps.event.addListener(marker, "dragend", function () {
       var pos = marker.getPosition();
       infowindow.setContent(
-        '<input type="text" placeholder="Label" id="label" /><br /><button onclick="saveMarker()">Save</button>'
+        '<input type="text" placeholder="Tell us about a little anecdote!" id="label" /> <br><br> <button id="savebtn" onclick="saveMarker()">Save</button>'
       );
       infowindow.setPosition(pos);
       infowindow.open(map, marker);
