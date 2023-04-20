@@ -1,11 +1,6 @@
 // Import functions needed from the SDKs needed
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-import {
-  getDatabase,
-  ref,
-  set,
-  onValue, push
-} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+import {getDatabase,ref,set,onValue, push} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
 
 //constraining map to Egypt bounds
 // let map;
@@ -530,7 +525,9 @@ function initMap() {
       content:
         '<input type="text" placeholder="Tell us about a little anecdote!" id="label" /> <br><br> <button id="savebtn" onclick="saveMarker()">Save</button>',
     });
+    
     infowindow.open(map, marker);
+    
     google.maps.event.addListener(marker, "dragend", function () {
       var pos = marker.getPosition();
       infowindow.setContent(
@@ -538,6 +535,7 @@ function initMap() {
       );
       infowindow.setPosition(pos);
       infowindow.open(map, marker);
+      infowindow.setAttribute('class', 'my-info-window');
     });
     window.saveMarker = function () {
       var label = document.getElementById("label").value;

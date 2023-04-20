@@ -1,21 +1,29 @@
 <html>
   <head>
     <title>El Meshwar</title>
+
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" , initial-scale="1"/>
-    <meta name="description" content="El Meshwar is a transmedia experience capturing the journey of commuting via Cairo's Metro."/>
+    <meta name="viewport" content="width=device-width" , initial-scale="1" />
+    <meta
+      name="description"
+      content="El Meshwar is a transmedia experience capturing the journey of commuting via Cairo's Metro."/>
+      
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="module" src="index.js"></script>
+
   </head>
 
   <body>
     <div id="preloader">
-      <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.297/build/spline-viewer.js"></script>
-      <spline-viewer url="https://prod.spline.design/GLOK8jgfF7uO5P2k/scene.splinecode"></spline-viewer> -->
+      <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.297/build/spline-viewer.js"></script>
+      <spline-viewer url="https://prod.spline.design/GLOK8jgfF7uO5P2k/scene.splinecode"></spline-viewer>
     </div>
+
+
+
 
       <nav>
         <div id="main">
@@ -24,8 +32,8 @@
         <a id="logo" href="index.html">
           <img src="img/logo.png" height="100" />
         </a>
-        <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i></a> -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i></a>
       </nav>
       
       <div id="mySidebar" class="sidebar">
@@ -41,12 +49,8 @@
           To contribute, simply go to the place on the map where your story took place, click for the marker to appear, 
           write out your anecdote, and click save!
         </p>
-        <!-- <a href="#"><button id="film"><img src="img/favicon.png"></button></a> -->
-        <ul>
-          <a href="film.html"><button id="film">film</button></a>
-          <a href="https://www.instagram.com/rayyanfelmeshwar/"><button id="instagram" class="closing" onClick="javascript:close_clip()">rayyan's instagram</button></a> 
-          <a href="https://letterboxd.com/felmeshwar/"><button id="letterboxd">rayyan's letterboxd</button></a>
-        </ul>
+        <button><a href="https://www.instagram.com/elmeshwarexperience/" id="instagram"></a> </button>
+        <button><a href="#" id="letterboxd"></a></button>
       </div>
       
       <script>
@@ -60,16 +64,13 @@
           document.getElementById("mySidebar").style.width = "0";
           //document.getElementById("main").style.marginRight= "0";
         }
-      </script>
+    </script>
 
     <div id="map"></div>
-      <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVJPu7IRt4xdVCcY2cf4g2NaYmxzpUoLg&callback=initMap">
-      var loader = document.getElementById("preloader");
-
-      window.addEventListener("load", function(){
-        loader.style.display = "none";
-      })
-      </script>
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVJPu7IRt4xdVCcY2cf4g2NaYmxzpUoLg&callback=initMap">
+    </script>
+    
   </body>
-
 </html>

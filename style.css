@@ -10,6 +10,20 @@ html {
   padding: 0;
 }
 
+/* #preloader{
+  background-color: #ffffff url(https://my.spline.design/stylizedmetro-8faeb5bc676dd7a0a0217aa4c5971e8a/) no-repeat center center;
+	color: #000000;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+} */
+
 /* makes the map fill the window */
 *{
   margin: 0;
@@ -27,13 +41,13 @@ html {
   src: url(Winkle-Bold.ttf);
 }
 
-nav{
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 18px;
   padding-left: 3%;
-  padding-right: 17%;
+  padding-right: 200px;
   /* backdrop-filter: blur(4px); */
   /* -webkit-backdrop-filter: blur(4px); */
   /* border: 1px solid rgba(0, 0, 0, 0.5); */
@@ -41,6 +55,12 @@ nav{
   z-index: 1;  
   background-color: transparent;
   width: 100%;
+}
+
+nav #logo{
+  align-items: center;
+  padding-right: 30%;
+  padding-left: 30%;
 }
 
 /* #infoButton{
@@ -86,7 +106,7 @@ nav{
 .sidebar {
   height: 100%;
   width: 0;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   top: 0;
   left: 0;
@@ -94,6 +114,7 @@ nav{
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  transition: all 0.5s ease;
 }
 
 .sidebar p {
@@ -144,8 +165,54 @@ nav{
   padding: 16px;
 }
 
+.my-info-window{
+  z-index: 9999;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
+}
+
+.sidebar #instagram{
+  font-family: Winkle-Bold;
+  font-size: 20px;
+  cursor: pointer;
+  color: #c22e3a;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 20px;
+  padding: 10px 15px;
+  border: none;
+}
+
+.sidebar #letterboxd{
+  font-family: Winkle-Bold;
+  font-size: 20px;
+  cursor: pointer;
+  color: #c22e3a;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: none;
+}
+
+.sidebar #film{
+  font-family: Winkle-Bold;
+  font-size: 20px;
+  cursor: pointer;
+  color: #c22e3a;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  padding: 10px 15px;
+  border: none;
 }
