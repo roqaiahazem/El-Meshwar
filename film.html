@@ -9,6 +9,40 @@
 </head>
 
 <body>
+	<nav>
+		<div id="main">
+			<span class="openbtn" onclick="openNav()">INFO</span>
+		</div>
+		<a id="logo" href="index.html">
+			<img src="img/logo.png" height="100" />
+		</a>
+		<!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i></a> -->
+	</nav>
+
+	<div id="mySidebar" class="sidebar">
+		<a href="javascript:void(0);" class="closebtn" onclick="closeNav()">X</a>
+		<p><b>El Meshwar</b> is a transmedia experience capturing the journey of commuting via Cairo's Metro.
+			<br>
+			<br>
+			This website is a platform for anecdotes within metro spaces. You're welcome to record your stories 
+			wether you saw or witnessed a situation that made you question something, or pissed you off, or pushed you to reflect, 
+			or even just made you laugh. 
+			<br>
+			<br>
+			To contribute, simply go to the place on the map where your story took place, click for the marker to appear, 
+			write out your anecdote, and click save!
+		</p>
+		<!-- <a href="#"><button id="film"><img src="img/favicon.png"></button></a> -->
+		<ul>
+			<a href="film.html"><button id="film">film</button></a>
+			<a href="https://linktr.ee/meshwartracklist"><button id="letterboxd">tracklist</button></a>
+			<a href="https://www.instagram.com/rayyanfelmeshwar/"><button id="instagram" class="closing" onClick="javascript:close_clip()">rayyan's instagram</button></a> 
+			<a href="https://letterboxd.com/felmeshwar/"><button id="letterboxd">rayyan's letterboxd</button></a>
+			<a href="https://letterboxd.com/felmeshwar/"><button id="letterboxd">rayyan's letterboxd</button></a>
+		</ul>
+	</div>
+
 	<div class="ElMeshwar">
     
 
@@ -16,6 +50,19 @@
 
 		
 	</div> 
+
+	<script>
+		function openNav() {
+			document.getElementById("mySidebar").style.width = "250px";
+			// document.getElementById("main").style.marginRight = "250px";
+			// document.getElementById("main").style.display = "none"; 
+		}
+		
+		function closeNav() {
+			document.getElementById("mySidebar").style.width = "0";
+			//document.getElementById("main").style.marginRight= "0";
+		}
+	</script>
 
 </body>
 </html>
