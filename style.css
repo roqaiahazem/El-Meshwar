@@ -224,3 +224,9 @@ nav #logo{
   padding: 10px 15px;
   border: none;
 }
+
+#webgl_iframe{
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-bottom: 10%;
+}
